@@ -10,7 +10,7 @@ router
     .post(async (req, res) => {
         let newBird = await Bird.create(req.body);
 
-        res.json(newBird)
+        res.json(newBird);
     })
     // @route: GET /api/bird
     // @desc: Show All Birds Route
@@ -41,7 +41,7 @@ router
         res.json(deletedBird);
     })
     // @route: GET /api/bird
-    // @desc: Get A Bird By Id Route
+    // @desc: Get One Bird By Id Route
     .get(async (req, res) => {
         let oneBird = await Bird.findById(req.params.id);
 
