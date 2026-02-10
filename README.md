@@ -3,7 +3,7 @@
 ### Steps
 -   `touch server.js`
 -   `npm init -y`
--   `"dev": "nodemon server.js" & "type": "module"
+-   `"dev": "nodemon server.js" & "type": "module"`
 -   `npm i express dotenv mongoose`
 -   `touch .gitignore .env`
 -   `node_modules/` inside .gitignore
