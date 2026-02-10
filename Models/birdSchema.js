@@ -34,10 +34,10 @@ const birdSchema = new mongoose.Schema({
         message: 'No Value Submitted For nativeRegion'
     }
 },
-{timestamps: true},
+    { timestamps: true }
 );
 
 // Index
-birdSchema.index({numberOfEggsPerClutch: 1});
+birdSchema.index({ numberOfEggsPerClutch: 1 });
 
 export default mongoose.model('Bird', birdSchema);
