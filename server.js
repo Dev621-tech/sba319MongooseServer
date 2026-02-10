@@ -5,6 +5,7 @@ import { logReq, globalErr } from './Middleware/middleware.js';
 import connectDB from './db/conn.js';
 import birdRoutes from './Routes/birdRoutes.js';
 import fishRoutes from './Routes/fishRoutes.js';
+import mammalRoutes from './Routes/mammalRoutes.js'
 
 // Setups
 dotenv.config();
@@ -19,6 +20,7 @@ app.use(logReq);
 // Routes
 app.use("/api/bird", birdRoutes);
 app.use("/api/fish", fishRoutes);
+app.use("/api/mammal", mammalRoutes);
 
 // Global Error Handling Middleware
 app.use(globalErr);
