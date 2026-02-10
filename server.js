@@ -3,6 +3,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import { logReq, globalErr } from './Middleware/middleware.js';
 import connectDB from './db/conn.js';
+import birdRoutes from './Routes/birdRoutes.js'
 
 // Setups
 dotenv.config();
@@ -15,7 +16,7 @@ app.use(express.json());
 app.use(logReq);
 
 // Routes
-
+app.use("/api/bird", birdRoutes )
 
 // Global Error Handling Middleware
 app.use(globalErr);
