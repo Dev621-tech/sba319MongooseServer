@@ -1,6 +1,7 @@
 // Imports
 import express from 'express';
 import dotenv from 'dotenv';
+import { logReq, globalErr } from './Middleware/middleware.js';
 
 
 // Setups
@@ -10,12 +11,13 @@ const PORT = process.env.PORT || 3001;
 
 // (Request) Middleware
 app.use(express.json());
+app.use(logReq);
 
 // Routes
 
 
 // Global Error Handling Middleware
-
+app.use(globalErr);
 
 // Listener
 app.listen(PORT, () => {
