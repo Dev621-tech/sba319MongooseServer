@@ -1,5 +1,4 @@
 import express from 'express';
-import Bird from '../Models/birdSchema.js';
 import birdCTRL from '../Controllers/birdControllers.js'
 
 const router = express.Router();
